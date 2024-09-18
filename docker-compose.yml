@@ -1,0 +1,22 @@
+version: "3.9"
+
+networks:
+  gateway:
+    external: true
+    name: gateway
+
+services:
+  deepstack:
+    image: "deepquestai/deepstack:gpu"
+    volumes:
+      - $INSTALL_DIR/deepstack:/datastore
+    environment:
+      - VISION-FACE=True
+    networks:
+      - gateway
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
