@@ -2,6 +2,7 @@ version: "3.9"
 
 services:
   deepstack:
+    container_name: deepstack
     image: "deepquestai/deepstack:gpu"
     ports:
       - "5555:5000"
