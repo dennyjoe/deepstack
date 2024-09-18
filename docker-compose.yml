@@ -9,7 +9,7 @@ services:
   deepstack:
     image: "deepquestai/deepstack:gpu"
     volumes:
-      - $INSTALL_DIR/deepstack:/datastore
+      - $INSTALL_DIR/datastore:/datastore
     environment:
       - VISION-FACE=True
     networks:
