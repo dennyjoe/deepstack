@@ -9,6 +9,7 @@ services:
       - $INSTALL_DIR/deepstack:/datastore
     environment:
       - VISION-FACE=True
+    restart: unless-stopped
     runtime: nvidia
     deploy:
       resources:
