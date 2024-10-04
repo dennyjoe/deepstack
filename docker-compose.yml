@@ -18,6 +18,6 @@ services:
     logging:
       driver: syslog
       options:
-        syslog-address: $SYSLOG_URL
+        syslog-address: "$SYSLOG_URL"
         syslog-format: "rfc3164"
         tag: "deepstack"
